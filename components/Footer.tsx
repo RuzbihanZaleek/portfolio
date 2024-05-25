@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
@@ -35,7 +36,12 @@ const Footer = () => {
             rounded-lg border border-black-300 backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75
             bg-black-200"
             >
-              <img src={profile.img} alt={profile.img} width={20} />
+              <img
+                src={profile.img}
+                alt={profile.img}
+                width={20}
+                onClick={() => (window.location.href = profile.link)}
+              />
             </div>
           ))}
         </div>
